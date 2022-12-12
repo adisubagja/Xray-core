@@ -210,5 +210,4 @@ jobs:
           tag: ${{ github.ref }}
           file_glob: true
           overwrite: true
-          release_name: Netz-Core
           body: "Modified Core Websocket"
