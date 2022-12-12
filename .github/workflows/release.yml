@@ -1,7 +1,14 @@
 name: Build and Release
 
 on:
+  repository_dispatch:
   workflow_dispatch:
+    inputs:
+      version:
+        description: "Tag to Release"
+        required: false
+        default: main
+        type: boolean
   release:
     types: [published]
   push:
