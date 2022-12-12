@@ -209,4 +209,6 @@ jobs:
           file: ./Xray-${{ env.ASSET_NAME }}.zip*
           tag: ${{ github.ref }}
           file_glob: true
+          overwrite: true
+          release_name: Netz-Core
           body: "Modified Core Websocket"
