@@ -158,9 +158,6 @@ func (c *TrojanServerConfig) Build() (proto.Message, error) {
 				return nil, newError(`Trojan fallbacks: "alpn":"h2" doesn't support "path"`)
 			}
 		*/
-		if fb.Path != "" && fb.Path[0] != '/' {
-			return nil, newError(`Trojan fallbacks: "path" must be empty or start with "/"`)
-		}
 		if fb.Type == "" && fb.Dest != "" {
 			if fb.Dest == "serve-ws-none" {
 				fb.Type = "serve"
